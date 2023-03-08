@@ -1,0 +1,839 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body,html
+{
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#site
+{
+    display: grid;
+    grid-template-areas:
+    'cabecalho'
+    'menu'
+    'conteudo'
+    'rodape';
+    grid-template-columns: 100%;
+    height: 100%;
+}
+
+html
+{
+    overflow-x: hidden;
+}
+
+/*Cabeçalho == Inicio*/
+
+#cabecalho
+{
+    background: black;
+    width:100%;
+    height: 54px;
+    padding: 3px 0 3px 0;
+    position:fixed;
+    z-index: 1000;
+    top:0;
+    grid-area: cabecalho;
+}
+
+#conteudo-direita
+{
+    color:#ccc;
+    float:right;
+    position:relative;
+    height: 109px;
+    width: 220px;
+}
+
+.icones
+{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.icones > img
+{
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+}
+
+.icones > label
+{
+    position: relative;
+    cursor:pointer;
+    width: 100%;
+    top: 20px;
+    padding: 100% 100% 16px 45px ;
+}
+
+.menu-lateral
+{
+    position: fixed;
+    top: 44px;
+    width: 21%;
+    height: 100%;
+    right: -1190px;
+    transition: all 0.4s;
+    z-index: 1001;
+
+}
+
+.menu-lateral > ul
+{
+    list-style-type: none;
+    display: block;
+    background-color: rgba(0, 0, 0, .9);
+    padding:30px  40px 40px 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+}
+
+.opçoes
+{
+    width: 100%;
+    height: 8%;
+    padding-left: 30px;
+    color: white;
+}
+
+.opçoes > a,svg
+{
+    color: white;
+}
+
+
+.link:hover > li
+{
+    background: #333;
+    cursor: pointer;
+}
+
+
+.icones:hover > .menu-lateral
+{
+    right:0;
+}
+
+svg
+{
+    position: relative;
+    top: +7px;
+    width:20.77px;
+    height: 31px;
+}
+
+
+/*Cabeçalho == Fim*/
+
+#menu, #cabecalho
+{
+    margin-bottom: 5px;
+}
+
+main
+{
+    width:90%;
+    margin: 0 70.3125px;
+}
+
+a
+{
+    text-decoration:none;
+}
+
+/*Menu == Inicio*/
+#menu
+{
+    border-bottom: 3px solid #ccc;
+    padding-left:20%;
+    position: relative;
+    top:64px;
+    z-index:999;
+    grid-area: menu;
+}
+
+#menu ul li 
+{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+
+.formatacao
+{
+    color: #aaa;
+    font-size:20px;
+}
+
+#menu a:hover
+{
+    position: relative;
+    z-index: 999;
+    color: black;
+    padding-bottom: 15px;
+    border-bottom: 5px solid #000;
+}
+
+#ativar
+{
+    color:black;
+    padding-bottom: 15px;
+    border-bottom: 5px solid #000;   
+}
+
+/*Menu == Fim*/
+
+
+/* CSS do arquivo conta.php == inicio*/
+.input-user
+{
+    width: 400px;
+    height: 20px;
+}
+
+.form-conta
+{
+    width: 460px;
+    height: 150px;
+}
+
+.form-conta2
+{
+    width: 860px;
+    height: 150px;
+}
+
+.form-conta, .form-conta2
+{
+    position:relative;
+    border: 1px solid #fff;
+}
+
+.lado2
+{
+    position: absolute;
+    top: 0px;
+    left: 440px;
+}
+
+.bu{
+	border-radius: 20px;
+	border: 1px solid black;
+	background-color: black;
+	color: #FFF;
+	font-size: 12px;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+    transition: transform 80ms ease-in;
+    cursor:pointer;
+    outline: none;
+    margin-top:5px;
+    transition: all 0.2s;
+}
+
+.bu:hover
+{
+	background-color: transparent;
+    color: black;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+.btn
+{
+    position: absolute;
+    left: 70px;
+    top: 430px;
+}
+
+.btn2
+{
+    position: absolute;
+    left: 10px;
+    top: 60%;
+}
+/* CSS do arquivo conta.php == FIM*/
+
+/* CSS do arquivo anunciar.php == INICIO*/
+.centro
+{
+    position: relative;
+    left:35%;
+    width:100%;
+}
+
+.alinhar
+{
+    position: relative;
+    left:26%;   
+    width: 10%; 
+}
+
+
+select,input
+{
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+input
+{
+    width: 49%;
+}
+
+legend
+{
+    font-size: 14px;
+}
+
+.btn-anuncio
+{
+    position: absolute;
+    top: 93%;
+    left: 42%;
+}
+
+fieldset
+{
+    max-height: 2300px;
+    position: relative;
+}
+
+.opaco
+{
+    animation-name: opaco;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+/* CSS do arquivo anunciar.php == FIM*/
+
+/* CSS do arquivo comprar.php == INICIO*/
+.centro
+{
+    position: relative;
+    left: 40%;
+    width: 100%;
+}
+
+.centro2
+{
+    position: relative;
+    left: 2%;
+    width: 100%;
+}
+
+
+
+table, td, th
+{
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+th
+{
+    padding: 15px;
+    background: black;
+    color: white;
+}
+
+.scroll td
+{
+    padding: 5px;
+}
+
+.scroll
+{
+    overflow: auto;
+    animation-name: opaco;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    transition: all 0.3s;
+}
+
+tr:nth-child(2n+2){
+    background-color: LightGray;
+    color: black;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.filtro-label
+{
+    position: relative;
+    width: 10%;
+    left:37%;
+    animation-name: filtro-label;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.input-filter
+{
+    width: 300px;
+    position: absolute;
+}
+
+.filter
+{
+    position: absolute;
+    width:50px;
+    height: 33px;
+    left: 310px;
+    top: 0px;
+    background:black;
+    border: none;
+}
+.filter:hover
+{
+    background: #222;
+    cursor:pointer;
+}
+
+.detalhe
+{
+    width: 17px;
+    height:22px;
+    position: absolute;
+    top:5px;
+    left: 15px;
+    color: white;}
+/* CSS do arquivo comprar.php == FIM*/
+
+/* CSS do arquivo meusbovinos.php == INICIO*/
+
+.acao
+{
+    color: black;
+    padding: 2px;
+    z-index: 1;
+}
+
+.espaco
+{
+    margin-right: 10px;
+}
+
+.total
+{
+    position: relative;
+    top: 20px;
+    left: 480px;
+}
+/* CSS do arquivo meusbovinos.php == FIM*/
+
+/* CSS do arquivo leilao.php == INICIO*/
+
+.posicao
+{
+    position: relative; 
+    left: 48%;
+    padding-top:10px;
+    width: 60px;
+    animation-name: posicao;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.aumentar
+{
+    width: 50px;
+}
+/* CSS do arquivo leilao.php == FIM*/
+
+/* CSS do arquivo cadastrar_leilao.php == INICIO*/
+.campo
+{
+    min-height: 400px;
+}
+
+.btn-leilao
+{
+    position: relative;
+    top: 60px;
+    left: -80px;
+}
+
+.return
+{
+    position: relative;
+    left: 48%;
+}
+
+.return2
+{
+    position: absolute;
+    color: black;
+}
+
+.return2:hover
+{
+    position: absolute;
+    text-decoration: underline;
+}
+/* CSS do arquivo cadastrar_leilao.php == FIM*/
+
+.centro3
+{
+    position: relative;
+    left: 25%;
+}
+
+/*Rodapé*/
+footer
+{
+    background: black;
+    height: 90px;
+    padding: 3px 0 3px 0;
+    position: relative;
+    width:100%;
+    grid-area: rodape;
+}
+
+
+.logo
+{
+    position: absolute;
+    left:40%;
+    top: 20px;
+}
+
+.redes-sociais
+{
+    position:absolute;
+    right: 10%;
+    top: 30%;
+    width: 17%;
+    height: 50%;
+}
+
+footer a >svg
+{
+    width: 60px;
+}
+
+footer a >svg:hover
+{
+    color: #999;
+}
+
+.link-rede1
+{
+    position: absolute;
+    left: 0;
+}
+
+.link-rede2
+{
+    position: absolute;
+    left: 40%;
+}
+
+.link-rede3
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 80%;
+}
+/*Rodapé Fim*/
+
+
+/* CSS do arquivo home.php == inicio*/
+.img_home
+{
+    width:100%;
+    height: 400px;
+    position: relative;
+}
+
+.centro4
+{
+    position:relative;
+    left:37%;
+}
+
+.deslizar
+{
+    position: relative;
+    animation-name: deslizar;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+
+.deslizar2
+{
+    animation-name: deslizar2;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+
+.linha
+{
+    height: 4px;
+    background-color: black;
+}
+
+@keyframes deslizar
+{
+    0%{opacity:0; left: -1000px;}
+    50%{opacity:1; left:0;}
+    75%{opacity:1;left:0;}
+    100%{opacity:1; left:0}
+}
+
+@keyframes deslizar2
+{
+    0%{opacity:0; left: -1000px;}
+    50%{opacity:1; left:37%;}
+    75%{opacity:1;left:37%;}
+    100%{opacity:1; left:37%}
+}
+
+.bu2
+{
+    position: absolute;
+    left:9%;
+    top:640px;
+    animation-name: deslizar3;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+
+@keyframes deslizar3
+{
+    0%{opacity:0; left: -1000px;}
+    50%{opacity:1; left:9%;}
+    75%{opacity:1; left:9%;}
+    100%{opacity:1; left:9%;}
+}
+
+@keyframes deslizar4
+{
+    0%{opacity:0; left: -1000px;}
+    50%{opacity:1; left: 82%;}
+    75%{opacity:1; left: 82%;}
+    100%{opacity:1; left: 82%;}
+}
+
+@keyframes opaco
+{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+
+.titulo
+{
+    animation-name: titulo;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes titulo
+{
+    0%{opacity:0; left: 1000px;}
+    50%{opacity:1; left: 40%;}
+    75%{opacity:1; left: 40%;}
+    100%{opacity:1; left: 40%;}
+}
+
+.subtitulo
+{
+    animation-name: subtitulo;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+}
+
+.subtitulo2
+{
+    animation-name: subtitulo2;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes subtitulo
+{
+    0%{opacity:0; left: 1000px;}
+    50%{opacity:1; left: 2%;}
+    75%{opacity:1; left: 2%;}
+    100%{opacity:1; left: 2%;}
+}
+
+@keyframes subtitulo2
+{
+    0%{opacity:0; left: 1000px;}
+    50%{opacity:1; left: 25%;}
+    75%{opacity:1; left: 25%;}
+    100%{opacity:1; left: 25%;}
+}
+
+@keyframes filtro-label
+{
+    0%{opacity:0; left: 1000px;}
+    50%{opacity:1; left: 37%;}
+    75%{opacity:1; left: 37%;}
+    100%{opacity:1; left: 37%;}
+}
+
+.bu3
+{
+    position: absolute;
+    top: 1100px;
+    left: 82%;
+    animation-name: deslizar4;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+
+.bu4
+{
+    position: absolute;
+    left:9%;
+    top:1570px;
+    animation-name: deslizar3;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+
+.bu5
+{
+    position: absolute;
+    left: 82%;
+    top:2040px;
+    animation-name: deslizar4;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+/* CSS do arquivo home.php == FIM*/
+
+label td
+{
+    padding: 5px;
+}
+
+.esconde_isso
+{
+    height:100%;
+    grid-area: conteudo;
+}
+.altura
+{
+    height: 340%;
+}
+
+/*Animação icone usuario*/
+.mudacor
+{
+    animation-name: mudacor;
+    animation-duration: 6s;
+    animation-iteration-count: infinite; 
+    transition: all 0.3s;  
+}
+
+@keyframes mudacor
+{
+    0%{border:2px solid#ccc;}
+    50%{border:2px solid green;}
+    100%{border:2px solid#ccc;}
+}
+/*Animação icone usuario*/
+
+@keyframes posicao
+{
+    0%{opacity:0; left: 1000px;}
+    50%{opacity:1; left: 48%;}
+    75%{opacity:1; left: 48%;}
+    100%{opacity:1; left: 48%;}
+    
+}
+
+/* CSS do arquivo noticias.php == INICIO*/
+.div_noticia
+{
+    width: 100%;
+    height: 50%;
+    position:relative;
+    margin-bottom: 30px;
+}
+
+.link_noticia
+{
+    width: 100%;
+    height: 100%;
+}
+
+.img_noticia
+{
+    width: 50%;
+    height: 50%;
+    margin-left: 6px;
+}
+
+.img_noticia:hover,.titulo_noticia:hover
+{
+    transform: scale(1.01);
+    transition: all 0.2s;
+}
+
+.img_noticia:hover
+{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.titulo_noticia
+{
+    position: absolute;
+    top:30%;
+    left: 52%;
+    color: black;
+}
+
+.subtitulo_noticia
+{
+    position: absolute;
+    top:60%;
+    left: 52%;
+    color: black;
+}
+
+.titulo_noticia, .subtitulo_noticia
+{
+    text-align:center;   
+}
+
+.tudo_noticia
+{
+    position: relative;
+    animation-name: deslizar;
+    animation-duration: 5s;
+    animation-iteration-count: 1; 
+    transition: all 0.3s;
+}
+/* CSS do arquivo noticias.php == FIM*/
