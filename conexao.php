@@ -34,7 +34,7 @@
                 return true;
             }
         }
-        
+
         public function logar($email,$senha)
         {
             global $conect;
@@ -94,8 +94,6 @@
                 return false;
 
             }
-            
-                
             
         }
 
