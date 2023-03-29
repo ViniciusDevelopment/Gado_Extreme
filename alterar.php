@@ -4,7 +4,6 @@ if(isset($_SESSION['id_usuarios']))
 ?>
 <script src="gado.js"></script>
 
-
 <?php
     $consulta=$conect->prepare("SELECT *FROM gado WHERE id_gado=:p1");
     $consulta-> bindValue(":p1",$_GET["id"]);
