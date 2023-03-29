@@ -56,7 +56,6 @@ if(isset($_SESSION['id_usuarios']))
         {
             echo("<script>erro_vacina();</script>");
         }
-
     }
 }
 else
