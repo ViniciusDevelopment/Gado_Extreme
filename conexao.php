@@ -18,10 +18,12 @@
             $consulta = $conect->prepare("SELECT id_usuarios FROM usuarios WHERE BINARY email = :e");
             $consulta->bindValue(":e",$email);
             $consulta->execute();
+
             if($consulta->rowCount() > 0)
             {
                 return false;
             }
+            
             else
             {
                 $consulta = $conect->prepare("INSERT INTO usuarios (nome,email,senha) VALUES(:n, :e, :s)");
