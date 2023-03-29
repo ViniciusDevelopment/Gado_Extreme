@@ -1,6 +1,10 @@
 <?php
+
 if(isset($_SESSION['id_usuarios']))
+
 {?>
+
+
 <h1 class="centro">Gerenciar Vacinas</h1>
 
 <script src="vacina.js"></script>
