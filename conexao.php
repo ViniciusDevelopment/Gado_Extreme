@@ -23,7 +23,7 @@
             {
                 return false;
             }
-            
+
             else
             {
                 $consulta = $conect->prepare("INSERT INTO usuarios (nome,email,senha) VALUES(:n, :e, :s)");
@@ -34,6 +34,7 @@
                 return true;
             }
         }
+        
         public function logar($email,$senha)
         {
             global $conect;
