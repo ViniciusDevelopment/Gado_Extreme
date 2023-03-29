@@ -52,7 +52,6 @@
             {
                 return false;
             }
-
         }
 
         public function alterar($emailalterar, $id)
